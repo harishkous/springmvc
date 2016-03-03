@@ -12,6 +12,7 @@ body {
  
 	<br>
 	<br>
+	${email} / ${name} / ${appProperties['text.loginPrompt']}
 	<div style="font-family: verdana; padding: 10px; border-radius: 10px; font-size: 12px; text-align:center;">
  
 		Spring MCV Tutorial by <a href="http://crunchify.com">Crunchify</a>.

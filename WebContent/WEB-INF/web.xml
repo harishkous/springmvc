@@ -14,13 +14,28 @@
         <servlet-class>
             org.springframework.web.servlet.DispatcherServlet
         </servlet-class>
+       <!-- <init-param>
+		    <param-name>contextClass</param-name>
+		    <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+		   </init-param> --> 
+        <init-param>
+	        <!-- override default name {servlet-name}-servlet.xml -->
+	       <param-name>contextConfigLocation</param-name>
+	      <!--  <param-value>com.ithejas.spring.config.Config</param-value> -->
+	       <param-value> /WEB-INF/springmvc-myconfig.xml</param-value>  
+	   </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
-        <url-pattern>/welcome.jsp</url-pattern>
-        <url-pattern>/welcome.html</url-pattern>
-        <url-pattern>*.html</url-pattern>
+         <url-pattern>/</url-pattern>
     </servlet-mapping>
-  
+  <!-- 	<context-param>
+	   <param-name>contextConfigLocation</param-name>
+	   <param-value>/WEB-INF/springmvc-myconfig.xml</param-value>
+	 </context-param>
+	
+	 <listener>
+	   <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	 </listener> -->
 </web-app>
