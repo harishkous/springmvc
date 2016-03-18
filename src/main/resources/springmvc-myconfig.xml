@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/data/mongo 
+          http://www.springframework.org/schema/data/mongo/spring-mongo-1.8.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+   
+ 	
+	 <!-- Enables the Spring MVC Annotation Configuration 
+    <context:annotation-config />-->
+     
+    <!-- Important!! -->
+    <!-- Default Servlet Handler (For Resources *.css, *.js, image,..) 
+    <mvc:default-servlet-handler />
+       <mvc:annotation-driven />    -->
+       
+       <!-- Package Scan 
+	<context:component-scan base-package="com.ithejas" />-->
+	 
+	
+       <!-- Config resource mapping 
+    <mvc:resources mapping="/styles/**" location="/WEB-INF/resources/css/" />-->
+    
+    <!-- Config Properties file 
+    <bean id="appProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list><value>/WEB-INF/ApplicationVB.properties</value></list>
+        </property>
+    </bean>
+    
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+		<property name="exposedContextBeanNames">
+            <list><value>appProperties</value></list>
+        </property>
+	</bean>-->
+	
+	 
+	
+	<!-- <bean id="mongo" scope="singleton" class="com.mongodb.MongoClient">
+    <constructor-arg index="0">
+        <bean id="repOne" class="com.mongodb.ServerAddress">
+            <constructor-arg index="0" type="java.lang.String" value="127.0.0.1" />
+        </bean>
+    </constructor-arg>
+</bean>    
+  
+<bean id="morphia" scope="singleton" class="org.mongodb.morphia.Morphia" />
+ 
+ <bean id="datastore" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+    <property name="targetObject" ref="morphia"/>
+    <property name="targetMethod" value="createDatastore"/>
+    <property name="arguments">
+        <list>
+            <ref bean="mongo"/>
+            <value>testDB</value>
+        </list>
+    </property>
+</bean>-->
+ 
+</beans>
+ 

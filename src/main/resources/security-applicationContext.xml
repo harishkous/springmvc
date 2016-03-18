@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<b:beans xmlns:b="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.springframework.org/schema/security"
+        xmlns:oauth="http://www.springframework.org/schema/security/oauth"
+        xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd http://www.springframework.org/schema/security/oauth http://www.springframework.org/schema/security/spring-security-oauth.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+ 
+    <!-- Global Security Settings 
+    <global-method-security pre-post-annotations="enabled" />-->
+ 
+    <!-- Form and Security Access Configuration 
+    <http use-expressions="true"   disable-url-rewriting="true">-->
+   <!--   <csrf disabled="true"/> -->
+    <!--     <session-management invalid-session-url="/login?time=0">
+            <concurrency-control max-sessions="1" expired-url="/login?time=1" />
+        </session-management> -->
+ 
+    <!--   <form-login login-page="/login" login-processing-url="/login.do" default-target-url="/dashboard"
+             always-use-default-target="false" 
+             authentication-failure-url="/login?err=1" 
+             username-parameter="username" password-parameter="password" />
+ 
+        <logout logout-url="/logout" logout-success-url="/login?out=1" delete-cookies="JSESSIONID" invalidate-session="true" /> -->  
+ 	<!-- 	 <intercept-url   pattern="/welcome" access="permitAll()" /> 
+        <intercept-url requires-channel="any" pattern="/login*" access="permitAll()" />
+        <intercept-url requires-channel="any" pattern="/**" access="hasRole('USER')" />-->
+       
+      <!--   <access-denied-handler error-page="/403" /> -->
+        
+        
+          <!--   <headers disabled="true" />
+		<frame-options policy="SAMEORIGIN" />
+		<hsts disable="true"/> 
+	</headers>
+	 
+    </http>-->
+ 
+    <!-- Authentication Providers for Form Login 
+    <authentication-manager alias="authenticationManager">-->
+        <!-- ADD THE AUTHENTICATION PROVIDERS HERE
+        <authentication-provider user-service-ref="loginService">
+   				 <password-encoder hash="sha" />
+		</authentication-provider> -->
+
+      <!--  <authentication-provider>
+		    <user-service>
+		        <user name="user" password="user" authorities="ROLE_USER" />
+		    </user-service>
+		</authentication-provider>  
+		
+    </authentication-manager>-->
+ 
+    <!-- ADD THE DATASOURCES HERE -->
+
+
+
+</b:beans>
