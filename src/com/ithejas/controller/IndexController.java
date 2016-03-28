@@ -12,6 +12,6 @@ public class IndexController
     @RequestMapping( value = "/dashboard", method = RequestMethod.GET )
     public String index()
     {
-        return "dashboard";
+        return "index";
     }
 }

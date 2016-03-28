@@ -2,17 +2,13 @@ package com.ithejas.spring.config;
 
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.PropertiesFactoryBean;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -38,16 +34,15 @@ import com.mongodb.MongoClient;
 @PropertySource("classpath:ApplicationVB.properties")
 @EnableMongoRepositories
 public class Config extends WebMvcConfigurerAdapter{
-	@Autowired
-	private Environment env;
+	 
 	
 	@Bean
 	public UrlBasedViewResolver setupViewResolver() {
 		 UrlBasedViewResolver resolver = new UrlBasedViewResolver();
-		 resolver.setPrefix("/WEB-INF/jsp/");
+		 resolver.setPrefix("/WEB-INF/views/");
 		 resolver.setViewClass(JstlView.class);
 		 resolver.setSuffix(".jsp");
-		 resolver.setExposedContextBeanNames("appProperties");
+		 //resolver.setExposedContextBeanNames("appProperties");
 		 return resolver;
 	}
 	
