@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-//feature second changes
+//feature second changes 
+//feature 2 updated
 @Controller
 public class Helloworld {
 	@RequestMapping("/welcome") 
