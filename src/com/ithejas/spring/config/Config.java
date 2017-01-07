@@ -22,7 +22,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 import com.mongodb.MongoClient;
 
-//edited online by Harry
+//edited online by Harry 2
 @Configuration
 //Specifies which package to scan
 @ComponentScan("com.ithejas")
